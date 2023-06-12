@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Blocks List</h1>
+
+    {% if block_list %}
+    <ul>
+
+      {% for block in block_list %}
+      <li>
+        <a href="{{ block.get_absolute_url }}">
+        {{block}}
+        </a>
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>There are no blocks in the base.</p>
+    {% endif %}       
+{% endblock %}

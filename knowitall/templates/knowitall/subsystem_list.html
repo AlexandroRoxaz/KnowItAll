@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Subsystems List</h1>
+
+    {% if subsystem_list %}
+    <ul>
+
+      {% for subsystem in subsystem_list %}
+      <li>
+        <a href="{{ subsystem.get_absolute_url }}">
+        {{ subsystem }}
+        </a>
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>There are no subsystems in the base.</p>
+    {% endif %}       
+{% endblock %}

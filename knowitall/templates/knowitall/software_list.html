@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Software List</h1>
+
+    {% if software_list %}
+    <ul>
+
+      {% for software in software_list %}
+      <li>
+        <a href="{{ software.get_absolute_url }}">
+        {{ software }}
+        </a>
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>There is no software in the base.</p>
+    {% endif %}       
+{% endblock %}

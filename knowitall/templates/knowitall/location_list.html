@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Locations List</h1>
+
+    {% if location_list %}
+    <ul>
+
+      {% for location in location_list %}
+      <li>
+        <a href="{{ location.get_absolute_url }}">
+        {{location}}
+        </a>
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>There are no locations in the base.</p>
+    {% endif %}       
+{% endblock %}

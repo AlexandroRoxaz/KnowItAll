@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>PTS List</h1>
+
+    {% if pts_list %}
+    <ul>
+
+      {% for pts in pts_list %}
+      <li>
+        <a href="{{ pts.get_absolute_url }}">
+        {{ pts }}
+        </a>
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>There are no PTS in the base.</p>
+    {% endif %}       
+{% endblock %}
