@@ -3,10 +3,10 @@
 {% block content %}
     <h1>Locations List</h1>
 
-    {% if location_list %}
+    {% if object_list %}
     <ul>
 
-      {% for location in location_list %}
+      {% for location in object_list %}
       <li>
         <a href="{{ location.get_absolute_url }}">
         {{location}}
