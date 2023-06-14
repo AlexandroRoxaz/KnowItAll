@@ -3,10 +3,10 @@
 {% block content %}
     <h1>Racks List</h1>
 
-    {% if rack_list %}
+    {% if object_list %}
     <ul>
 
-      {% for rack in rack_list %}
+      {% for rack in object_list %}
       <li>
         <a href="{{ rack.get_absolute_url }}">
         {{ rack }}
