@@ -3,10 +3,10 @@
 {% block content %}
     <h1>Software List</h1>
 
-    {% if software_list %}
+    {% if object_list %}
     <ul>
 
-      {% for software in software_list %}
+      {% for software in object_list %}
       <li>
         <a href="{{ software.get_absolute_url }}">
         {{ software }}
