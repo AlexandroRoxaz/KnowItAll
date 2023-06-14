@@ -3,10 +3,10 @@
 {% block content %}
     <h1>Buildings List</h1>
 
-    {% if buiding_list %}
+    {% if object_list %}
     <ul>
 
-      {% for building in building_list %}
+      {% for building in object_list %}
       <li>
         <a href="{{ building.get_absolute_url }}">
         {{building}}
