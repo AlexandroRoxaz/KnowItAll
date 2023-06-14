@@ -3,10 +3,10 @@
 {% block content %}
     <h1>PTS List</h1>
 
-    {% if pts_list %}
+    {% if object_list %}
     <ul>
 
-      {% for pts in pts_list %}
+      {% for pts in object_list %}
       <li>
         <a href="{{ pts.get_absolute_url }}">
         {{ pts }}
