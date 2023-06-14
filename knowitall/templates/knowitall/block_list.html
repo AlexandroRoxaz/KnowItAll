@@ -6,7 +6,7 @@
     {% if block_list %}
     <ul>
 
-      {% for block in block_list %}
+      {% for block in object_list %}
       <li>
         <a href="{{ block.get_absolute_url }}">
         {{block}}
