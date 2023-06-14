@@ -3,10 +3,10 @@
 {% block content %}
     <h1>Subsystems List</h1>
 
-    {% if subsystem_list %}
+    {% if object_list %}
     <ul>
 
-      {% for subsystem in subsystem_list %}
+      {% for subsystem in object_list %}
       <li>
         <a href="{{ subsystem.get_absolute_url }}">
         {{ subsystem }}
